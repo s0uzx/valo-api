@@ -1,21 +1,21 @@
 import express from "express";
 import { config } from "dotenv";
-import cors from "cors"; // Importa o middleware CORS
+import valorantRoutes from "./routes/valorantRoutes.js"; // ajuste se nome diferente
 
-import routes from "./routes/index.routes.js";
-
-config(); // Carrega variáveis de ambiente do arquivo .env
-const port = process.env.PORT || 4001; // Define a porta do servidor
-
-// Inicializa o Express
+config();
+const port = process.env.PORT || 4000;
 const app = express();
-app.use(cors()); // Habilita CORS para todas as rotas
 
-app.use(express.json()); // Parse de JSON
+app.use(express.json());
 
-app.use("/", routes);
+// Health
+app.get("/", (req, res) => {
+  res.json({ message: "API Valorant (agents & maps) funcionando!" });
+});
 
-// Iniciar o servidor
+// prefixar com /api
+app.use("/api", valorantRoutes);
+
 app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
+  console.log(`Servidor Valorant rodando na porta ${port}`);
 });
