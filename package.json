@@ -17,7 +17,7 @@
     "prisma:seed": "node prisma/seed/seed.js"
   },
   "prisma": {
-    "seed": "node prisma/seed/seed.js"
+  "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.15.0",
@@ -29,6 +29,9 @@
     "nodemon": "^3.1.9"
   },
   "devDependencies": {
-    "prisma": "^6.15.0"
+    "@types/node": "^24.3.1",
+    "prisma": "^6.15.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   }
 }
