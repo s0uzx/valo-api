@@ -1,6 +1,6 @@
 # Tutorial: Criando um Backend Node.js para Gerenciamento de Animes
 
-Este tutorial vai te guiar na criação de uma API REST para gerenciar uma coleção de animes, utilizando Node.js com Express. Vamos construir um CRUD completo seguindo uma arquitetura organizada com routes, controllers e models, usando um array em memória para armazenar os dados.
+Este tutorial vai te guiar na criação de uma API REST para gerenciar uma coleção de agentes e mapas do valorant, utilizando Node.js com Express. Vamos construir um CRUD completo seguindo uma arquitetura organizada com routes, controllers e models, usando um array em memória para armazenar os dados.
 
 ## Capacidades Técnicas Trabalhadas
 
